@@ -1,25 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../components/Header.css";
 
 const Header = () => {
     return (
-        <Navbar expand="lg" style={{ backgroundColor: '#003B5C' /* Penang Blue */ }}>
-            <Navbar.Brand href="/" style={{ color: '#FFC72C' /* Penang Yellow */ }}>
+        <header className="header">
+            <div className="logo-container">
                 <img
-                    src="/assets/logo.png" // Make sure your logo path is correct
+                    src={process.env.PUBLIC_URL + "/images/penangCanvasLogo.jpg"} // Correct path for public folder
                     alt="Penang Canvas Logo"
-                    style={{ width: '40px', height: '40px', marginRight: '10px' }}
+                    className="logo"
                 />
-                Penang Canvas
-            </Navbar.Brand>
-            <Nav className="mr-auto">
-                <Nav.Link as={Link} to="/tourist-spots" style={{ color: '#FFC72C' /* Penang Yellow */ }}>Tourist Spots</Nav.Link>
-                <Nav.Link as={Link} to="/food-beverages" style={{ color: '#FFC72C' /* Penang Yellow */ }}>Food & Beverages</Nav.Link>
-                <Nav.Link as={Link} to="/hotels" style={{ color: '#FFC72C' /* Penang Yellow */ }}>Hotels</Nav.Link>
-            </Nav>
-        </Navbar>
+            </div>
+            <nav>
+                <ul className="nav-links">
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/tourist-spots">Tourist Spots</Link>
+                    </li>
+                    <li>
+                        <Link to="/foods-and-beverages">Foods & Beverages</Link>
+                    </li>
+                    <li>
+                        <Link to="/hotels">Hotels</Link>
+                    </li>
+                </ul>
+            </nav>
+            <div className="search-container">
+                <input type="text" placeholder="Search..." />
+            </div>
+        </header>
     );
 };
 

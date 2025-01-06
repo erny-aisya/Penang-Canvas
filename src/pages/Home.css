@@ -1,55 +1,83 @@
-/* Home.css */
-.home-container {
-    background: linear-gradient(45deg, #006ab6, #ffcc00, #ffffff);
-    color: #fff;
-    text-align: center;
-    padding: 50px 10px;
-}
-
-.home-title {
-    font-size: 3.5em;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.home-description {
-    font-size: 1.5em;
-    color: #fff;
-    margin-bottom: 40px;
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 500px;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-}
-
-.about-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
+/* General styles for the homepage */
+.homepage {
+    text-align: center; /* Centers all text content within the homepage */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-.about-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #006ab6;
-    margin-bottom: 15px;
-}
-
-.about-description {
-    font-size: 1.3em;
+/* Title styling */
+.homepage-title {
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.contact-details {
-    font-size: 1.2em;
-    margin-top: 15px;
+/* Section container for categories and images */
+.homepage-section {
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the boxes horizontally */
+    gap: 20px;
+}
+
+/* Category box styling */
+.category-box {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling for each category */
+.category-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Text inside the category box */
+.category-box h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.category-box p {
+    font-size: 0.9rem;
+    margin: 10px;
+    color: #555;
+}
+
+.category-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.category-box a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+.homepage-footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
 }
