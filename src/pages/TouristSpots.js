@@ -164,7 +164,10 @@ const TouristSpots = () => {
                             <p><strong>Location:</strong> {spot.location}</p>
                             <p><strong>Price:</strong> {spot.price}</p>
                             <p>{spot.description}</p>
-                            <a href={spot.website} target="_blank" rel="noopener noreferrer" className="website-link">Visit Website</a>
+                            {spot.website && (
+                                <a href={spot.website} target="_blank" rel="noopener noreferrer" className="website-link">Visit Website</a>
+                            )}
+
                         </div>
                     </div>
                 ))}
