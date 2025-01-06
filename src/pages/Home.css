@@ -113,3 +113,22 @@
 .slick-next:focus {
     outline: none;
 }
+
+/* Style for the 'See All' link */
+.see-all-link {
+    color: #007bff; /* Blue color */
+    font-size: 1.1em;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.see-all-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* To position it at the right */
+.tourist-header {
+    display: flex;
+    justify-content: space-between; /* Positions the h2 and 'See All' on opposite ends */
+    align-items: center; /* Vertically align the content */
+}
