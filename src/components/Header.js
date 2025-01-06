@@ -21,16 +21,13 @@ const Header = () => {
                         <Link to="/tourist-spots">Tourist Spots</Link>
                     </li>
                     <li>
-                        <Link to="/foods-and-beverages">Foods & Beverages</Link>
+                        <Link to="/food-beverages">Foods & Beverages</Link>
                     </li>
                     <li>
                         <Link to="/hotels">Hotels</Link>
                     </li>
                 </ul>
             </nav>
-            <div className="search-container">
-                <input type="text" placeholder="Search..." />
-            </div>
         </header>
     );
 };

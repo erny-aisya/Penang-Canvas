@@ -34,10 +34,3 @@
     color: #333;
     font-size: 16px;
 }
-
-.search-container input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
