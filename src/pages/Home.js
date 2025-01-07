@@ -135,7 +135,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://media-cdn.tripadvisor.com/media/photo-s/29/bc/0d/26/hotel-facade.jpg"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/497818372.jpg?k=38c70d3dc44bcca089f700e659f7942f6a49ed5592d2c096f7265ee5d6f08570&o=&hp=1"
                         alt="Luxury Hotel Facade"
                         style={{
                             borderRadius: '15px',
@@ -159,7 +159,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="http://thenextsomewhere.com/wp-content/uploads/2017/07/PenangStreetArt-2.jpg"
+                        src="https://image-tc.galaxy.tf/wijpeg-c92j35cf0m6i9x8k4svsip2vv/penang-armenian-street-art-mural.jpg"
                         alt="Penang Street Art"
                         style={{
                             borderRadius: '15px',
@@ -183,7 +183,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://middleclass.sg/wp-content/uploads/2019/09/penang14-1024x768.jpg"
+                        src="https://freshable.co/wp-content/uploads/2023/09/pasembur-malaysian-indian-salad-1024x1024-1.jpg"
                         alt="Delicious Penang Food"
                         style={{
                             borderRadius: '15px',
@@ -207,7 +207,7 @@ function Home() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="http://findingbeyond.com/app/uploads/2017/03/george-town-georgetown-old-town-penang-island-malaysia-52.jpg"
+                        src="https://www.marriottresidencespenang.com/app/uploads/sites/739/2023/03/George-Town-Penang-1-scaled.jpg"
                         alt="George Town"
                         style={{
                             borderRadius: '15px',
@@ -241,31 +241,76 @@ function Home() {
             </section>
 
             {/* Tourist Spots Horizontal Sliding */}
-            <section id="tourist-spots" style={{margin: "50px 0"}}>
+            <section id="tourist-spots" style={{ margin: "50px 0" }}>
                 <div className="section-header">
                     <h2>Must-Visit Tourist Spots</h2>
                     <a href="/tourist-spots" className="see-all-link">See All</a>
                 </div>
                 <Slider {...settings}>
                     {touristSpots.map((spot, index) => (
-                        <div className="tourist-box" key={index}>
-                            <div className="tourist-image">
+                        <div
+                            className="tourist-box"
+                            key={index}
+                            style={{
+                                width: "300px", // Fixed width for consistency
+                                height: "400px", // Fixed height for consistency
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "space-between",
+                                alignItems: "center", // Centralize content horizontally
+                                padding: "15px",
+                                backgroundColor: "#fff",
+                                borderRadius: "10px",
+                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                                textAlign: "center", // Centralize text
+                            }}
+                        >
+                            {/* Photo Container */}
+                            <div
+                                className="tourist-image-container"
+                                style={{
+                                    width: "90%",
+                                    height: "180px",
+                                    margin: "0 auto 15px", // Centered with spacing
+                                    overflow: "hidden",
+                                    borderRadius: "10px",
+                                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                                    backgroundColor: "#f8f8f8", // Optional background for the container
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
                                 <img
                                     src={spot.image}
                                     alt={spot.name}
-                                    style={{width: "100%", height: "auto", borderRadius: "10px"}}
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover",
+                                    }}
                                 />
                             </div>
-                            <div className="tourist-info">
-                                <h3>{spot.name}</h3>
-                                <p><strong>Location:</strong> {spot.location}</p>
-                                <p><strong>Price:</strong> {spot.price}</p>
-                                <p>{spot.description}</p>
+
+                            {/* Information */}
+                            <div className="tourist-info" style={{ textAlign: "center" }}>
+                                <h3 style={{ fontSize: "1.2rem", marginBottom: "8px" }}>{spot.name}</h3>
+                                <p style={{ fontSize: "0.9rem", margin: "5px 0" }}>
+                                    <strong>Location:</strong> {spot.location}
+                                </p>
+                                <p style={{ fontSize: "0.9rem", margin: "5px 0" }}>
+                                    <strong>Price:</strong> {spot.price}
+                                </p>
+                                <p style={{ fontSize: "0.9rem", margin: "5px 0" }}>{spot.description}</p>
                                 <a
                                     href={spot.website}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    style={{color: "#007bff", textDecoration: "underline"}}
+                                    style={{
+                                        color: "#007bff",
+                                        textDecoration: "underline",
+                                        fontSize: "0.9rem",
+                                    }}
                                 >
                                     Learn More
                                 </a>
@@ -274,6 +319,7 @@ function Home() {
                     ))}
                 </Slider>
             </section>
+
 
             {/* Food & Beverages Horizontal Sliding */}
             <section id="food-beverages" style={{margin: "50px 0"}}>
