@@ -103,18 +103,21 @@ const Hotels = () => {
 
     return (
         <div className="hotel-page">
-            <h1>Explore Penang Hotels</h1>
+            <h1 style={{textAlign: "center", margin: "20px 0"}}>️🔑Explore Penang Hotels🛏️</h1>
             <div className="hotel-spots">
                 <div className="hotel-boxes">
                     {hotels.map((hotel, index) => (
                         <div key={index} className="hotel-box">
-                            <img src={hotel.image} alt={hotel.name} className="hotel-image" />
+                            <img src={hotel.image} alt={hotel.name} className="hotel-image"/>
                             <div className="hotel-info">
                                 <h2>{hotel.name}</h2>
                                 <p><strong>Location:</strong> {hotel.location}</p>
                                 <p><strong>Description:</strong> {hotel.description}</p>
                                 <p><strong>Rating:</strong> {hotel.rating}</p>
-                                <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="website-link">Book Now</a>
+                                <div className="links">
+                                    <a href={hotel.website} target="_blank" rel="noopener noreferrer"
+                                       className="website-link">Book Now</a>
+                                </div>
                             </div>
                         </div>
                     ))}

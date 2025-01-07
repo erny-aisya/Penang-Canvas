@@ -23,7 +23,7 @@ const TouristSpots = () => {
             name: 'Penang Peranakan Mansion',
             location: '29, Church Street, George Town, Penang',
             price: 'RM 20 (Adult), RM 10 (Child)',
-            description: 'Penang Peranakan Mansion is a museum showcasing the culture of the Peranakans, also known as Straits Chinese. Visitors can explore the mansion, filled with antique furniture, intricate decorations, and historical artifacts that reflect the opulent lifestyle of the Peranakan community.',
+            description: 'A museum showcasing the culture of the Peranakans. Visitors can explore the mansion, filled with antique furniture, intricate decorations, and historical artifacts that reflect the opulent lifestyle of the Peranakan community.',
             image: 'https://thesmartlocal.my/wp-content/uploads/2022/09/image16-5.jpg',
             website: 'http://www.pinangperanakanmansion.com.my/'
         },
@@ -153,16 +153,16 @@ const TouristSpots = () => {
     ];
 
     return (
-        <div className="tourist-spots">
-            <h1>Must-Do Experiences in Penang</h1>
-            <div className="tourist-boxes">
+        <div className="tourists-spots">
+            <h1 style={{ textAlign: "center", margin: "20px 0", color: "white" }}>🛵Must-Do Experiences in Penang💨</h1>
+                <div className="tourists-boxes">
                 {touristSpots.map((spot, index) => (
-                    <div key={index} className="tourist-box">
-                        <img src={spot.image} alt={spot.name} />
+                    <div key={index} className="tourists-box">
+                        <img src={spot.image} alt={spot.name} className="tourists-image" />
                         <h2>{spot.name}</h2>
-                        <p>{spot.location}</p>
-                        <p>{spot.price}</p>
-                        <p>{spot.description}</p>
+                        <p><strong>Location:</strong>{spot.location}</p>
+                        <p><strong>Price:</strong>{spot.price}</p>
+                        <p><strong>Description:</strong>{spot.description}</p>
                         {spot.website && (
                             <button
                                 className="visit-button"
