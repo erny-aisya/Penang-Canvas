@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Penang-Canvas/static/css/main.0bb2e9fa.css",
-    "main.js": "/Penang-Canvas/static/js/main.6fa4bbe6.js",
+    "main.js": "/Penang-Canvas/static/js/main.eb9478ef.js",
     "static/js/488.67b57667.chunk.js": "/Penang-Canvas/static/js/488.67b57667.chunk.js",
     "static/media/slick.svg": "/Penang-Canvas/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Penang-Canvas/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/Penang-Canvas/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Penang-Canvas/index.html",
     "main.0bb2e9fa.css.map": "/Penang-Canvas/static/css/main.0bb2e9fa.css.map",
-    "main.6fa4bbe6.js.map": "/Penang-Canvas/static/js/main.6fa4bbe6.js.map",
+    "main.eb9478ef.js.map": "/Penang-Canvas/static/js/main.eb9478ef.js.map",
     "488.67b57667.chunk.js.map": "/Penang-Canvas/static/js/488.67b57667.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0bb2e9fa.css",
-    "static/js/main.6fa4bbe6.js"
+    "static/js/main.eb9478ef.js"
   ]
 }
