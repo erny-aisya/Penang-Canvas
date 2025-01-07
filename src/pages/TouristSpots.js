@@ -154,7 +154,7 @@ const TouristSpots = () => {
 
     return (
         <div className="tourists-spots">
-            <h1 style={{ textAlign: "center", margin: "20px 0", color: "white" }}>🛵Must-Do Experiences in Penang💨</h1>
+            <h1 style={{ textAlign: "center", margin: "20px 0", color: "white" }}>🛵Explore Penang💨</h1>
                 <div className="tourists-boxes">
                 {touristSpots.map((spot, index) => (
                     <div key={index} className="tourists-box">

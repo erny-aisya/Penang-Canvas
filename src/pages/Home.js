@@ -242,7 +242,7 @@ function Home() {
 
             {/* Tourist Spots Horizontal Sliding */}
             <section id="tourist-spots" style={{margin: "50px 0"}}>
-                <div className="tourist-header">
+                <div className="section-header">
                     <h2>Must-Visit Tourist Spots</h2>
                     <a href="/tourist-spots" className="see-all-link">See All</a>
                 </div>
