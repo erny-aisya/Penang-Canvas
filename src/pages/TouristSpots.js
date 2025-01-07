@@ -77,7 +77,7 @@ const TouristSpots = () => {
             location: 'Jalan Kebun Bunga, Penang ',
             price: 'Free admission',
             description: 'Penang Botanical Garden is a lush paradise located at the foot of Penang Hill, home to a wide variety of tropical plants. The park features well-maintained walking trails, water features, and beautiful flowering plants, making it a peaceful escape from the city\'s hustle and bustle.',
-            image: 'https://lh3.googleusercontent.com/proxy/MmZMP5toVH7jXEaHS-Q59OP-uACsJf7s4egrt6amTLZ_vVu8lyWSkW0ZhNzNGbTYb0Hc50IPs7arrqDmR87vRb4_8PCuJcVQ8Ape3JJ5R6jEIBOGqpyyD33vs5uXPMvbedVl-VY',
+            image: 'https://d1bb1mccaihlpl.cloudfront.net/variants/kxllm7xdv3u71t5atsric76sj0cr/5495488087431af32265aaaaa1b8a274541d70555aa4d7c01d8d0fed27e7c152',
             website: 'https://botanicalgardens.penang.gov.my/index.php/en/pengenalan/sejarah'
         },
         {
@@ -158,17 +158,19 @@ const TouristSpots = () => {
             <div className="tourist-boxes">
                 {touristSpots.map((spot, index) => (
                     <div key={index} className="tourist-box">
-                        <img src={spot.image} alt={spot.name} className="tourist-image" />
-                        <div className="tourist-info">
-                            <h2>{spot.name}</h2>
-                            <p><strong>Location:</strong> {spot.location}</p>
-                            <p><strong>Price:</strong> {spot.price}</p>
-                            <p>{spot.description}</p>
-                            {spot.website && (
-                                <a href={spot.website} target="_blank" rel="noopener noreferrer" className="website-link">Visit Website</a>
-                            )}
-
-                        </div>
+                        <img src={spot.image} alt={spot.name} />
+                        <h2>{spot.name}</h2>
+                        <p>{spot.location}</p>
+                        <p>{spot.price}</p>
+                        <p>{spot.description}</p>
+                        {spot.website && (
+                            <button
+                                className="visit-button"
+                                onClick={() => window.open(spot.website, '_blank', 'noopener noreferrer')}
+                            >
+                                Visit Website
+                            </button>
+                        )}
                     </div>
                 ))}
             </div>
